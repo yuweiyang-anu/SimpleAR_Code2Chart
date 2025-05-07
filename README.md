@@ -21,24 +21,14 @@
 
 <!-- <a style="display: block; text-align: center; margin-top: 20px;"><img src="assets/teaser.png" width="90%"></a> -->
 
-## ##xiaochen
+#### yuwei yang
 
-rl部分主要是在trl上改的，所以最主要的是装好trl的环境依赖
-
-docker本地位置
-/openseg_blob/wxc/docker/simplear.tar
-```
-docker load -i /openseg_blob/wxc/docker/simplear.tar
-```
-
-网络位置： [Package simplear_wxc](https://github.com/users/2018211801/packages/container/package/simplear_wxc)
-
+docker网络位置： [Package simplear_wxc](https://github.com/users/2018211801/packages/container/package/simplear_wxc)
 
 进入docker后激活虚拟环境
 ```
 conda activate simpar
 ```
-
 
 /openseg_blob/wxc/SimpleAR/ckpt 路径下是下载好的一些模型，有reward,有visual tokenizer, 有base model checkpoint（目前还有问题，作者传错了）
 
