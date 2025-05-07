@@ -85,6 +85,18 @@ bash ./scripts/train/sft_code2chart_10_images.sh
 
 You can modify the path in above 4 scripts to adapt your own **data**, **model** and **save_checkpoints**, also the **wandb api_key** for loss visualization.
 
+**Generation**
+For code2chart generation (on chartmmic benchmark) using the SimpleAR-1.5B-RL model:
+```
+python generate_code2chart_on_chartmmic.py --vllm_serving
+```
+
+For other generation:
+```
+python generate.py --vllm_serving 
+```
+You can modify the parameters (like **model-path** (i.e., model for test) or **save_dir** (i.e., save path for generated images)) in the **generate_code2chart_on_chartmmic.py** or **generate.py**
+
 ## ################################################################################
 ========= Original SimpleAR Instruction ===========
 ## Introduction
