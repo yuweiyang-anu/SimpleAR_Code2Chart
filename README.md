@@ -22,11 +22,11 @@
 <!-- <a style="display: block; text-align: center; margin-top: 20px;"><img src="assets/teaser.png" width="90%"></a> -->
 
 ## ## Instruction by yuwei
-Step I: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
+**Step I**: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
 
-Step II: docker pull ruler136/simplear_docker:latest
+**Step II**: docker pull ruler136/simplear_docker:latest
 
-Step III: Start the docker, and activate the simpar env:
+**Step III**: Start the docker, and activate the simpar env:
 ```
 sudo docker run -it \
 --gpus all \
@@ -42,8 +42,8 @@ cd /openseg_blob/xxx/SimpleAR_Code2Chart
 conda activate simpar
 ```
 
-Step IV: For training:
-First Step (Optional, has done): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
+**Step IV**: For training:
+First Step (**Optional, has done**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
 ```
 bash ./scripts/extract_token_pretrain.sh
 bash ./scripts/extract_token.sh 
@@ -55,7 +55,7 @@ After generating the visual tokens, run the following py file to generate the me
 python generate_meta.py
 ```
 
-Now run the code：
+**Now run the code**：
 For Pretraining:
 ```
 bash ./scripts/train/pretrain_code2chart.sh
