@@ -58,17 +58,17 @@ python generate_meta.py
 Now run the code：
 For Pretraining:
 ```
-
+bash ./scripts/train/pretrain_code2chart.sh
 ```
 
 For SFT:
 ```
-
+bash ./scripts/train/sft_code2chart.sh
 ```
 
 For GRPO:
 ```
-
+bash ./scripts/train/grpo_code2chart.sh
 ```
 
 ## Introduction
