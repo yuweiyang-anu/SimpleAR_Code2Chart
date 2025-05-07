@@ -22,9 +22,15 @@
 <!-- <a style="display: block; text-align: center; margin-top: 20px;"><img src="assets/teaser.png" width="90%"></a> -->
 
 ## ## Instruction by yuwei
-**Step I**: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
+**Step I**: 
+```
+git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
+```
 
-**Step II**: docker pull ruler136/simplear_docker:latest
+**Step II**: 
+```
+docker pull ruler136/simplear_docker:latest
+```
 
 **Step III**: Start the docker, and activate the simpar env:
 ```
