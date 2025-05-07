@@ -63,7 +63,7 @@ python generate_meta.py
 
 **Now run the script for different requirements**：
 
-For Pretraining:
+For Pretrain:
 ```
 bash ./scripts/train/pretrain_code2chart.sh
 ```
