@@ -48,7 +48,7 @@ class DataArguments:
     mixture_ratio: str = field(default=None)
     p_drop_cond: float = field(default=0.0)
 
-    vq_model_ckpt: str = field(default="/openseg_blob/wxc/SimpleAR/ckpt/cosmos") # vq_vae: cosmos
+    vq_model_ckpt: str = field(default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/cosmos") # vq_vae: cosmos
     dataset_name: str = field(default="laion")
     dataset_type: str = field(default="image")
     code_path: str = field(default="./debug")
