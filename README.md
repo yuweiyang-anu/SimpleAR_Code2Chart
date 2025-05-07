@@ -22,78 +22,23 @@
 <!-- <a style="display: block; text-align: center; margin-top: 20px;"><img src="assets/teaser.png" width="90%"></a> -->
 
 ## ## yuwei yang
+Step I: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
+Step II: docker pull ruler136/simplear_docker:latest
 
-docker网络位置： [Package simplear_wxc](https://github.com/users/2018211801/packages/container/package/simplear_wxc)
+Step III: 
 
-进入docker后激活虚拟环境
+Start the docker, and activate the simpar env:
+```
+```
+
 ```
 conda activate simpar
 ```
 
-/openseg_blob/wxc/SimpleAR/ckpt 路径下是下载好的一些模型，有reward,有visual tokenizer, 有base model checkpoint（目前还有问题，作者传错了）
-
-/openseg_blob/wxc/SimpleAR/datasets 是论文中用到的数据，目前的rl数据还不公开。
-
-先使用yaqi的couting tool data进行测试  /openseg_blob/wxc/SimpleAR/datasets/one_animal_grid_layout_5000_refine_v03_metadata_nolist2.json 已经进行过第一步预处理把visual token存下来了
-
-> 原文
->
-> ForSFT,weuseJourneyDB[54],Synthetic dataset-1M [39], and 10M internal data. We adopt a simple data filtering strategy for supervised fine-tuning (SFT) data by removing all images whose short edge is smaller than 1024 pixels. We recaption all the images using Qwen2-VL [65], and randomly choose from long and short prompts during training.
->  We sampled approximately 11k prompts from the SFT training data to perform GRPO training.
-
-
-
-> author claimed key observations:
->  We experimented with different prompt types (pure short prompts, pure long prompts, and a mixture of both), and consistently observed performance gains on GenEval across all settings with the provided hyper-parameters.
-> Using short prompts during RL training leads to more significant performance improvements compared to long prompts. We believe this is because, after pretraining and supervised fine-tuning (SFT), the model is already proficient at handling long prompts. In contrast, the reinforcement learning (RL) stage plays a more crucial role in enhancing the model’s ability to generate high-quality outputs from short prompts, which are initially more difficult for the model.
-
-
-
-
-
-训练
+Step IV: For training:
 ```
 bash scripts/train/train_grpo.sh
 ```
-参数修改在
-cd simpar/configs
-尤其注意训练使用的节点，如果用num台机器，在 zero3.yaml 里修改 num_processes: {num-1}
-
-debug的配置
-
-```
-  {
-    "name": "simpar Debug accelerate launch",
-    "type": "debugpy",
-    "request": "launch",
-    "module": "accelerate.commands.launch",
-    "args": [
-         "--main_process_port", "1234",
-      "--num_processes", "3",
-      "--config_file", "simpar/configs/accelerate_configs/zero3.yaml",
-      "simpar/train/llava_trainer_grpo.py",
-      "--config", "simpar/configs/config_grpo.yaml",
-      "--data_path", "/openseg_blob/wxc/SimpleAR/datasets/one_animal_grid_layout_5000_refine_v03_metadata_nolist2.json"
-    ],
-    "cwd": "/openseg_blob/wxc/SimpleAR",
-    "console": "integratedTerminal",
-    "justMyCode": false,
-    "env": {
-       "DEBUGPY_PROCESS_SPAWN_TIMEOUT": "1200000",
-      "DEBUGGER_CONNECT_TIMEOUT": "1200000",
-      "CUDA_LAUNCH_BLOCKING": "0"
-    }
-  }
-```
-
-
-
-如果自己动手安装环境
-bash scripts/env_rl.sh
-
-
-============================================================================
-=================================================================================
 
 ## Introduction
 
