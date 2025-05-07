@@ -26,10 +26,15 @@ Step I: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
 
 Step II: docker pull ruler136/simplear_docker:latest
 
-Step III: 
-
-Start the docker, and activate the simpar env:
+Step III: Start the docker, and activate the simpar env:
 ```
+sudo docker run -it \
+--gpus all \
+--ipc=host \
+--name simplear_container \
+-v ~/openseg_blob:/openseg_blob \
+ruler136/simplear_docker:latest \
+bash -c "cd /openseg_blob && exec /bin/bash"
 ```
 
 ```
