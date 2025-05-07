@@ -24,7 +24,7 @@ def process_dataset(dataset):
     with Pool(processes=cpu_count()) as pool:
         meta = list(filter(None, tqdm(pool.starmap(check_file, [(i, code_dir, label_dir) for i in range(total)]), total=total)))
     
-    save_path = os.path.join(root, f"{dataset}_{resolution}_{len(meta)}_meta.json")
+    save_path = os.path.join(root, f"{dataset}_{resolution}_{len(meta)}_meta_ten_images.json")
     with open(save_path, "w") as f:
         json.dump(meta, f, indent=4)
     
