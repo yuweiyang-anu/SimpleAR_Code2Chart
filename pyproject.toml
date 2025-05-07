@@ -1,0 +1,106 @@
+[tool.black]
+line-length = 240
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simpar"
+version = "1.7.0.dev0"
+description = "SimpAR: Pushing the Frontier of Autoregressive Visual Generation through Pretraining, SFT, and RL"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+[project.optional-dependencies]
+standalone = [
+    "shortuuid",
+    "httpx==0.24.0",
+    "einops",
+    "ftfy",
+]
+
+
+train = [
+    "simpar[standalone]",
+    "numpy==1.26.4",
+    "open_clip_torch",
+    "fastapi",
+    "markdown2[all]",
+    "numpy",
+    "requests",
+    "sentencepiece",
+    "torch==2.4.1",
+    "torchvision==0.19.1",
+    "uvicorn",
+    "wandb",
+    "deepspeed==0.14.4",
+    "peft==0.4.0",
+    "accelerate>=0.29.1",
+    "transformers==4.46.0",
+    "bitsandbytes==0.41.0",
+    "sentencepiece~=0.1.99",
+    "einops==0.6.1",
+    "einops-exts==0.0.4",
+    "gradio_client==0.2.9",
+    "urllib3<=2.0.0",
+    "datasets==2.21.0",
+    "pydantic==1.10.8",
+    "timm",
+    "hf_transfer",
+    "opencv-python",
+    "av",
+    "decord",
+    "tyro",
+    "scipy",
+    "pytorch_lightning",
+    "loguru",
+    "mediapy",
+    "iopath",
+    "imageio",
+    "ijson",
+    "trl==0.15.2",
+    "latex2sympy2_extended",
+    "clint",
+    "math_verify",
+   
+]
+
+[tool.setuptools.packages.find]
+include = ["simpar*", "trl*"]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+]
+
+[tool.wheel]
+exclude = [
+    "assets*",
+    "benchmark*",
+    "docs",
+    "dist*",
+    "playground*",
+    "scripts*",
+    "tests*",
+    "checkpoints*",
+    "project_checkpoints*",
+    "debug_checkpoints*",
+    "mlx_configs*",
+    "wandb*",
+    "notebooks*",
+]
