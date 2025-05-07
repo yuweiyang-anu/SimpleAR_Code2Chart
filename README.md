@@ -72,6 +72,14 @@ For GRPO:
 bash ./scripts/train/grpo_code2chart.sh
 ```
 
+For SFT on 10 Images:
+```
+bash ./scripts/train/sft_code2chart_10_images.sh
+```
+
+You can modify the path in above 4 scripts to adapt your own data, model and save checkpoints, also the wandb api_key for loss visualization.
+
+## ################################################################################
 ## Introduction
 
 This paper presents SimpleAR, a vanilla autoregressive visual generation model that achieves state-of-the-art text-to-image generation performance. First the first time, we demonstrate that:
