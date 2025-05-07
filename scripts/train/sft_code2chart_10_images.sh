@@ -44,7 +44,7 @@ ACCELERATE_CPU_AFFINITY=1 \
     --lr_scheduler_type "constant" \
     --logging_steps 1 \
     --tf32 True \
-    --model_max_length 5120 \
+    --model_max_length 6144 \
     --dataloader_num_workers 16 \
     --lazy_preprocess True \
     --torch_compile True \
