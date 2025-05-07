@@ -38,7 +38,7 @@ bash -c "cd /openseg_blob && exec /bin/bash"
 ```
 
 ```
-cd SimpleAR_Code2Chart
+cd /openseg_blob/xxx/SimpleAR_Code2Chart
 conda activate simpar
 ```
 
