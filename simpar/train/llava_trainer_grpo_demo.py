@@ -14,7 +14,6 @@
 
 import os
 import sys
-# sys.path.append("/openseg_blob/wxc/SimpleAR")
 
 import logging
 import wandb
@@ -100,8 +99,6 @@ def broadcast_pickle_object(obj, src=0, device="cuda:0"):
     # 非源进程反序列化对象
     serialized_obj = bytes(tensor.tolist())
     return pickle.loads(serialized_obj)
-
-    
 
 
 class LLaVAGRPOTrainer(GRPOTrainer):
@@ -412,14 +409,14 @@ class GRPOScriptArguments(ScriptArguments):
     )
 
     vq_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/cosmos"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/cosmos"
     )
 
     clip_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/CLIP-ViT-H-14-laion2B-s32B-b79K"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/CLIP-ViT-H-14-laion2B-s32B-b79K"
     )
     aest_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/aesthetic-preditor/HPS_v2_compressed.pt"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/aesthetic-preditor/HPS_v2_compressed.pt"
     )
 
 
