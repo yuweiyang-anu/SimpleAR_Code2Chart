@@ -66,7 +66,6 @@ from simpar.grpo.rewards import (
 )
 
 # 设置 Hugging Face 缓存路径
-# os.environ["HF_HOME"] = "/openseg_blob/wxc/huggingface_cache"
 import pickle
 import torch
 import torch.distributed as dist
@@ -102,8 +101,6 @@ def broadcast_pickle_object(obj, src=0, device="cuda:0"):
     return pickle.loads(serialized_obj)
 
     
-
-
 class LLaVAGRPOTrainer(GRPOTrainer):
 
     def _decode_images(self, completion_ids):
@@ -392,7 +389,6 @@ class LLaVAGRPOTrainer(GRPOTrainer):
         }
     
 
-
 @dataclass
 class GRPOScriptArguments(ScriptArguments):
     """
@@ -463,14 +459,14 @@ class GRPOScriptArguments(ScriptArguments):
     )
 
     vq_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/cosmos"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/cosmos"
     )
 
     clip_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/CLIP-ViT-H-14-laion2B-s32B-b79K"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/CLIP-ViT-H-14-laion2B-s32B-b79K"
     )
     aest_model_ckpt: str = field(
-        default="/openseg_blob/wxc/SimpleAR/ckpt/aesthetic-preditor/HPS_v2_compressed.pt"
+        default="/openseg_blob/v-yuweiyang/SimpleAR/ckpt/aesthetic-preditor/HPS_v2_compressed.pt"
     )
 
 
