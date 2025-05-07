@@ -42,7 +42,7 @@ cd /openseg_blob/xxx/SimpleAR_Code2Chart
 conda activate simpar
 ```
 
-**Step IV**: For training:
+**Step IV**: Training:
 First Step (**Optional, has done**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
 ```
 bash ./scripts/extract_token_pretrain.sh
@@ -56,6 +56,7 @@ python generate_meta.py
 ```
 
 **Now run the code**：
+
 For Pretraining:
 ```
 bash ./scripts/train/pretrain_code2chart.sh
