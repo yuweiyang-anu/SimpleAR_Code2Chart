@@ -23,6 +23,7 @@
 
 ## ## yuwei yang
 Step I: git clone https://github.com/yuweiyang-anu/SimpleAR_Code2Chart.git
+
 Step II: docker pull ruler136/simplear_docker:latest
 
 Step III: 
