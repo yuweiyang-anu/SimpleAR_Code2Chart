@@ -83,7 +83,7 @@ For SFT on 10 Images:
 bash ./scripts/train/sft_code2chart_10_images.sh
 ```
 
-You can modify the path in above 4 scripts to adapt your own data, model and save checkpoints, also the wandb api_key for loss visualization.
+You can modify the path in above 4 scripts to adapt your own **data**, **model** and **save_checkpoints**, also the **wandb api_key** for loss visualization.
 
 ## ################################################################################
 ## Introduction
