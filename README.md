@@ -48,7 +48,7 @@ First Step (Optional, has done): Extract the visual tokens, gen_resolution: 512 
 bash ./scripts/extract_token_pretrain.sh
 bash ./scripts/extract_token.sh 
 ```
-For your own code and data, you need to modified the path (py path (path of extract_token.py), code_path (path of generate dicrete code of input images) and gen_data_path (path of json file for input image paths and caption/python_code)) in the extract_token_pretrain.sh or extract_token.sh files.
+For your own code and data, you need to modified the path (py path (path of extract_token.py), code_path (path of generate discrete code of input images) and gen_data_path (path of json file for input image paths and caption/python_code)) in the extract_token_pretrain.sh or extract_token.sh files.
 
 ```
 
