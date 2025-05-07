@@ -43,8 +43,15 @@ conda activate simpar
 ```
 
 Step IV: For training:
+First Step (Optional, has done): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
 ```
-bash scripts/train/train_grpo.sh
+bash ./scripts/extract_token_pretrain.sh
+bash ./scripts/extract_token.sh 
+```
+For your own code and data, you need to modified the path (py path (path of extract_token.py), code_path (path of generate dicrete code of input images) and gen_data_path (path of json file for input image paths)) in the extract_token_pretrain.sh or extract_token.sh files.
+
+```
+
 ```
 
 ## Introduction
