@@ -49,7 +49,7 @@ conda activate simpar
 ```
 
 **Step IV**: Training:
-First Step (**Optional, has done**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
+First Step (**Optional, has done, skip to run the code**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
 ```
 bash ./scripts/tokens/extract_token_pretrain.sh
 bash ./scripts/tokens/extract_token.sh 
@@ -61,7 +61,7 @@ After generating the visual tokens, run the following py file to generate the me
 python generate_meta.py
 ```
 
-**Now run the code**：
+**Now run the script for different requirements**：
 
 For Pretraining:
 ```
