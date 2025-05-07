@@ -50,6 +50,23 @@ bash ./scripts/extract_token.sh
 ```
 For your own code and data, you need to modified the path (py path (path of extract_token.py), code_path (path of generate discrete code of input images) and gen_data_path (path of json file for input image paths and caption/python_code)) in the extract_token_pretrain.sh or extract_token.sh files.
 
+After generating the visual tokens, run the following py file to generate the meta information (json file that store the path of visual tokens): (need to modify the 'root' and 'total' (number for running) for your own data)
+```
+python generate_meta.py
+```
+
+Now run the code：
+For Pretraining:
+```
+
+```
+
+For SFT:
+```
+
+```
+
+For GRPO:
 ```
 
 ```
