@@ -49,7 +49,7 @@ conda activate simpar
 ```
 
 **Step IV**: Training:
-First Step (**Optional, has done, skip to run the code**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
+First Step (**Optional, has done, skip to run the script**): Extract the visual tokens, gen_resolution: 512 for pretrain, gen_resolution: 1024 for sft / RL
 ```
 bash ./scripts/tokens/extract_token_pretrain.sh
 bash ./scripts/tokens/extract_token.sh 
