@@ -75,6 +75,7 @@ bash ./scripts/train/sft_code2chart.sh
 
 For GRPO:
 ```
+pip install vllm==0.7.2
 bash ./scripts/train/grpo_code2chart.sh
 ```
 
