@@ -89,7 +89,7 @@ You can modify the path in above 4 scripts to adapt your own **data**, **model**
 
 For code2chart generation (on chartmmic benchmark) using the SimpleAR-1.5B-RL model: 
 
-If use vllm serving for acceleration:
+If use vllm_serving for acceleration:
 ```
 cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm ./
 cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm_local ./
