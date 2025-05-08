@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: /openseg_blob/wxc/SimpleAR/ckpt/SimpleAR-1.5B-SFT
+model_name_or_path: /openseg_blob/v-yuweiyang/SimpleAR/ckpt/SimpleAR-1.5B-SFT
 torch_dtype: bfloat16
 attn_implementation: sdpa
 
