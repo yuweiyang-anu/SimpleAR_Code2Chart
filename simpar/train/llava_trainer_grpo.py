@@ -36,7 +36,6 @@ import open_clip
 from hpsv2.src.open_clip import create_model_and_transforms, get_tokenizer
 from open_clip import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
 import trl
-print(trl.__file__)
 import sys
 print(sys.path)
 print("debug==============")
