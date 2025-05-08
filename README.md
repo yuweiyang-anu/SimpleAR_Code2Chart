@@ -87,16 +87,23 @@ You can modify the path in above 4 scripts to adapt your own **data**, **model**
 
 **Generation**
 
-For code2chart generation (on chartmmic benchmark) using the SimpleAR-1.5B-RL model: (use vllm serving for acceleration)
+For code2chart generation (on chartmmic benchmark) using the SimpleAR-1.5B-RL model: 
+
+If use vllm serving for acceleration:
+```
+cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm ./
+cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm_local ./
+```
+
 ```
 python3 generate_code2chart_on_chartmmic.py --vllm_serving
 ```
 
-For other generation: (use vllm serving for acceleration)
+For other generation: 
 ```
 python3 generate.py --vllm_serving --prompts "xxxxx"
 ```
-You can modify the parameters (like **model-path** (i.e., model for test) or **save_dir** (i.e., save path for generated images)) in the **generate_code2chart_on_chartmmic.py** or **generate.py**
+If do not use vllm, remove **--vllm_serving**. You can modify the parameters (like **model-path** (i.e., model for test) or **save_dir** (i.e., save path for generated images)) in the **generate_code2chart_on_chartmmic.py** or **generate.py**
 
 ## ################################################################################
 ========= Original SimpleAR Instruction ===========
