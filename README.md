@@ -73,14 +73,15 @@ For SFT:
 bash ./scripts/train/sft_code2chart.sh
 ```
 
-For GRPO:
-```
-bash ./scripts/train/grpo_code2chart.sh
-```
-
 For SFT on 10 Images:
 ```
 bash ./scripts/train/sft_code2chart_10_images.sh
+```
+
+For GRPO: (follow the official instruction to create different enironment for grpo)
+```
+conda activate simpar_grpo
+bash ./scripts/train/grpo_code2chart.sh
 ```
 
 You can modify the path in above 4 scripts to adapt your own **data**, **model** and **save_checkpoints**, also the **wandb api_key** for loss visualization.
@@ -91,6 +92,7 @@ For code2chart generation (on chartmmic benchmark) using the SimpleAR-1.5B-RL mo
 
 If use vllm_serving for acceleration:
 ```
+conda activate simpar
 cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm ./
 cp -r /openseg_blob/v-yuweiyang/SimpleAR/vllm_local ./
 ```
