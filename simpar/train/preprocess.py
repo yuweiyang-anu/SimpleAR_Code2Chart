@@ -67,8 +67,8 @@ def _add_speaker_and_signal(header, source, get_conversation=True):
 
 
 PROMPTS_GEN = [
-        "A minimalistic black and white sketch of ",
-    # "A detailed digital painting of ",
+    # "A minimalistic black and white sketch of ",
+    "A detailed digital painting of ",
     # "A highly realistic image of ",
     # "An abstract representation of ",
     # "A fantasy illustration featuring ",
